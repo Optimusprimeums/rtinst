@@ -6,13 +6,7 @@
 
 Ubuntu and Debian Seedbox Installation
 
------*****UBUNTU 22.04 WARNING*****-----
-
-You must run the following prior to running the script due to php8 not supporting all packages in Ubuntu 22.04
-
-  sudo apt install software-properties-common
-
-	sudo add-apt-repository ppa:ondrej/php -y
+Ubuntu 22.04 now supported with adding of PHP Repositories to enable script to complete
 
 Download and run setup (if logged in directly as root, do not need to use sudo)
 
@@ -38,6 +32,7 @@ Current release has been tested with clean installs of:
 	Ubuntu 18
 	Ubuntu 19
 	Ubuntu 20
+	Ubuntu 21
 	Ubuntu 22.04
 	Debian 9 "Stretch"
 	Debian 10 "Buster"

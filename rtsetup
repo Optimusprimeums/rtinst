@@ -101,7 +101,7 @@ ln -sf /etc/rtinst/rtsetup /usr/local/bin
 
 echo "Adding PHP repositoy"
 apt-get install -yqq software-properties-common
-add-apt-repository ppa:ondrej/php -y
+add-apt-repository ppa:ondrej/php > /dev/null 2>&1
 
 echo "Installation complete"
 echo
