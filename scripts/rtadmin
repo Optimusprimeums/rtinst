@@ -45,7 +45,7 @@ fi
 clear
 
 echo "For more information go to:"
-echo "https://github.com/arakasi72/rtinst/blob/master/README.md"
+echo "https://github.com/optimusprimeums/rtinst/blob/master/README.md"
 echo "Select from the following options:"
 echo "1.) rtsetup - update the rtinst scripts"
 echo "2.) rtadduser - add new user"
