@@ -243,13 +243,13 @@ if [ "$relno" = "20" ] || [ "$(lsb_release -sr)" = "20.04" ] || [ "$relno" = "11
   libcver=libcurl4
 fi
 
-if [ "$relno" = "21" ] || [ "$(lsb_release -sr)" = "21.04" ]; then
+if [ "$relno" = "21" ] || [ "$(lsb_release -sr)" = "21.10" ]; then
   phpver=php7.4
   phploc=/etc/php/7.4
   libcver=libcurl4
 fi
 
-if [ "$relno" = "21" ] || [ "$(lsb_release -sr)" = "21.04" ]; then
+if [ "$relno" = "22" ] || [ "$(lsb_release -sr)" = "22.04" ]; then
   phpver=php7.4
   phploc=/etc/php/7.4
   libcver=libcurl4
