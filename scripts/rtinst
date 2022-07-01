@@ -249,6 +249,12 @@ if [ "$relno" = "21" ] || [ "$(lsb_release -sr)" = "21.04" ]; then
   libcver=libcurl4
 fi
 
+if [ "$relno" = "21" ] || [ "$(lsb_release -sr)" = "21.04" ]; then
+  phpver=php8.1
+  phploc=/etc/php/8.1
+  libcver=libcurl4
+fi
+
 serveripa=$(ip route get 8.8.8.8 | awk 'NR==1 {print $7}')
 serveripb=$(wget -qO- --timeout=3 ipecho.net/plain)
 serveripc=$(wget -qO- --timeout=3 ipinfo.io/ip)
@@ -504,7 +510,7 @@ if [ -z "$webpass" ]  && [ $passflag != 2 ]; then
       passflag=2
     fi
   fi
-  
+
   if [ $passflag != 2 ]; then
     echo "Set Password for RuTorrent web client"
     webpass=$(set_pass)
@@ -545,7 +551,7 @@ echo "No more user input required, you can complete unattended"
 echo "It will take approx 10 minutes for the script to complete"
 echo
 
-# kill apt-daily.service if running 
+# kill apt-daily.service if running
 if [[ $(systemctl list-units --all apt-daily.service | fgrep -c apt-daily.service) -gt 0 ]]; then
   systemctl stop apt-daily.service >> $logfile 2>&1
   systemctl kill --kill-who=all apt-daily.service >> $logfile 2>&1
@@ -1054,13 +1060,13 @@ if [ -z $ru_current ]; then
   echo "   RuTorrent was not installed" | tee -a $home/rtinst.info
 else
   echo "   RuTorrent $ru_current installed" | tee -a $home/rtinst.info
-  
+
   if [ $leflag = 0 ]; then
     echo "   rutorrent can be accessed at https://$serverdn/rutorrent" | tee -a $home/rtinst.info
   else
     echo "   rutorrent can be accessed at https://$serverip/rutorrent" | tee -a $home/rtinst.info
   fi
-  
+
   if [ $passflag = 1 ]; then
     echo "   rutorrent password set to $webpass" | tee -a $home/rtinst.info
   elif [ $passflag = 2 ]; then
@@ -1070,7 +1076,7 @@ else
   fi
   echo "   to change rutorrent password enter: rtpass" | tee -a $home/rtinst.info
   echo | tee -a $home/rtinst.info
-  
+
   if [ $leflag = 0 ]; then
     echo "   If enabled, access https downloads at https://$serverdn/download/$user" | tee -a $home/rtinst.info
   else
