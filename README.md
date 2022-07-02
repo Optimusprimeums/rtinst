@@ -2,11 +2,11 @@
 
 ### Note: Now installs Lets Encrypt SSL certificates
 
+#### Ubuntu 22.04 now supported with adding of PHP Repositories to enable script to complete
+
 #### 30 Second Guide
 
 Ubuntu and Debian Seedbox Installation
-
-Ubuntu 22.04 now supported with adding of PHP Repositories to enable script to complete
 
 Download and run setup (if logged in directly as root, do not need to use sudo)
 
