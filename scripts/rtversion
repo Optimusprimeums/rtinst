@@ -35,6 +35,8 @@ else
   echo "RuTorrent: not installed"
 fi
 
+git --global --add safe.directory /etc/rtinst
+
 echo
 
 echo "rtinst"
